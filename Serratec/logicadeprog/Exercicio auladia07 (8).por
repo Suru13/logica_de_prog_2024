@@ -1,0 +1,70 @@
+programa{
+
+
+  funcao inicio() {
+
+    inteiro var, totalVotosx, totalVotosy, totalVotosb, totalVotos
+
+    totalVotosx = 0
+    totalVotosy = 0
+    totalVotosb = 0
+    totalVotos  = 0
+
+    real  px, py , pb
+
+    px = 0.0
+    py = 0.0
+    pb = 0.0
+    
+    faca{
+
+    
+    escreva("1-Candidao - X\n")
+    escreva("2-Candidao - Y\n")
+    escreva("3-Branco \n")
+    escreva("0-Encerrar Votação - X\n")
+    escreva("Digite a sua escolha:\n")
+    leia(var)
+    escolha(var){
+           caso 1:
+                  escreva("Candidato X escolido\n")
+                  totalVotosx+=1
+           pare
+
+           caso 2:
+                  escreva("Candidato Y escolido\n")
+                  totalVotosy+=1
+           pare
+
+           caso 3: 
+                  escreva("Voto em Branco\n")
+                  totalVotosb+=1
+           pare
+             
+           caso contrario:
+                          escreva("Voto em Branco\n")
+                          totalVotosb+=1
+           pare 
+
+           caso 0:
+                  escreva("Obrigado pela sua participação \n")
+
+           pare                
+    }
+    
+   }enquanto(var!=0)
+
+    totalVotos = totalVotosx + totalVotosy + totalVotosb
+    px = (totalVotosx / totalVotos) * 100
+    py = ( totalVotosy / totalVotos) * 100
+    pb = (totalVotosb / totalVotos) * 100
+    escreva("Total de votos: \n",totalVotos)
+    escreva("Candidato X: ",totalVotosx," voto (s)", px," % do total \n")
+    escreva("Candidato Y: ",totalVotosy," voto (s)", py," % do total \n")
+    escreva("Branco: ",totalVotosb," voto (s)", pb," % do total \n")
+    escreva("Nulo: ",totalVotosb," voto (s)",pb," % do total \n")
+    escreva("\n")
+              
+ }
+
+}
